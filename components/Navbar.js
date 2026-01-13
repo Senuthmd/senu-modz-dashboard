@@ -1,16 +1,18 @@
-import { useState } from "react";
+"use client"; // VERY IMPORTANT
+
+import { useState, useRef } from "react";
 
 export default function Navbar() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef(null);
 
   const toggleMusic = () => {
-    const audio = document.getElementById("bg-music");
-    if (!audio) return;
-    if (audio.paused) {
-      audio.play();
+    if (!audioRef.current) return;
+    if (audioRef.current.paused) {
+      audioRef.current.play();
       setIsPlaying(true);
     } else {
-      audio.pause();
+      audioRef.current.pause();
       setIsPlaying(false);
     }
   };
@@ -25,7 +27,7 @@ export default function Navbar() {
         {isPlaying ? "⏸ Pause Music" : "▶ Play Music"}
       </button>
 
-      <audio id="bg-music" loop>
+      <audio ref={audioRef} loop>
         <source src="/music/bg-music.mp3" type="audio/mpeg" />
       </audio>
     </header>
