@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senu Modz | Professional Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #020617; }
+        .glass { background: rgba(30, 41, 59, 0.5); backdrop-filter: blur(8px); border: 1px solid rgba(255, 255, 255, 0.05); }
+    </style>
+</head>
+<body class="text-slate-200">
+
+    <div class="flex min-h-screen">
+        <aside class="w-64 border-r border-slate-800 p-6 hidden lg:flex flex-col gap-8 bg-[#020617]">
+            <div class="flex items-center gap-3 px-2">
+                <div class="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-white shadow-lg shadow-blue-600/20">S</div>
+                <h1 class="text-xl font-bold tracking-tight text-white">SENU MODZ</h1>
+            </div>
+
+            <nav class="flex flex-col gap-2 flex-1">
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-900/40">
+                    <i data-lucide="layout-dashboard" class="w-5 h-5"></i> <span class="font-medium">Dashboard</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-white transition-all">
+                    <i data-lucide="bot" class="w-5 h-5"></i> <span class="font-medium">My Bots</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-white transition-all">
+                    <i data-lucide="credit-card" class="w-5 h-5"></i> <span class="font-medium">Buy Panel</span>
+                </a>
+                <a href="#" class="flex items-center gap-3 px-4 py-3 rounded-xl text-slate-400 hover:bg-slate-800/50 hover:text-white transition-all">
+                    <i data-lucide="book-open" class="w-5 h-5"></i> <span class="font-medium">Resources</span>
+                </a>
+            </nav>
+
+            <div class="mt-auto p-4 bg-slate-900/50 rounded-2xl border border-slate-800">
+                <div class="flex items-center gap-3">
+                    <div class="w-8 h-8 rounded-full bg-slate-700"></div>
+                    <div>
+                        <p class="text-sm font-bold text-white leading-none">Senuth</p>
+                        <p class="text-xs text-slate-500">Free Plan</p>
+                    </div>
+                </div>
+            </div>
+        </aside>
+
+        <main class="flex-1 p-6 lg:p-10 overflow-y-auto">
+            <header class="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-10">
+                <div>
+                    <h2 class="text-3xl font-bold text-white">Dashboard Overview</h2>
+                    <p class="text-slate-400 mt-1">Powering WhatsApp Automation seamlessly.</p>
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-500 text-white px-6 py-3 rounded-xl font-semibold transition-all flex items-center gap-2 shadow-lg shadow-blue-600/30">
+                    <i data-lucide="plus-circle" class="w-5 h-5"></i>
+                    Connect New Bot
+                </button>
+            </header>
+
+            <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+                <div class="glass p-6 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-blue-600/10 rounded-lg text-blue-500"><i data-lucide="bot"></i></div>
+                        <span class="text-xs font-bold text-emerald-500 bg-emerald-500/10 px-2 py-1 rounded-full">ACTIVE</span>
+                    </div>
+                    <h3 class="text-slate-400 text-sm font-medium">Bots Available</h3>
+                    <p class="text-3xl font-bold text-white mt-1">05</p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-purple-600/10 rounded-lg text-purple-500"><i data-lucide="users"></i></div>
+                    </div>
+                    <h3 class="text-slate-400 text-sm font-medium">Interested Users</h3>
+                    <p class="text-3xl font-bold text-white mt-1">1,240</p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-orange-600/10 rounded-lg text-orange-500"><i data-lucide="zap"></i></div>
+                        <span class="text-xs font-bold text-slate-400 bg-slate-800 px-2 py-1 rounded-full">99%</span>
+                    </div>
+                    <h3 class="text-slate-400 text-sm font-medium">Server Uptime</h3>
+                    <p class="text-3xl font-bold text-white mt-1">Online</p>
+                </div>
+
+                <div class="glass p-6 rounded-2xl">
+                    <div class="flex justify-between items-start mb-4">
+                        <div class="p-2 bg-pink-600/10 rounded-lg text-pink-500"><i data-lucide="message-square"></i></div>
+                    </div>
+                    <h3 class="text-slate-400 text-sm font-medium">Messages Sent</h3>
+                    <p class="text-3xl font-bold text-white mt-1">45.2k</p>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-8">
+                <div class="xl:col-span-2 glass rounded-2xl overflow-hidden border border-slate-800">
+                    <div class="p-6 border-b border-slate-800 flex justify-between items-center">
+                        <h3 class="font-bold text-white">Recent Bot Activity</h3>
+                        <button class="text-blue-500 text-sm font-medium">View All</button>
+                    </div>
+                    <div class="overflow-x-auto">
+                        <table class="w-full text-left">
+                            <thead class="bg-slate-800/30 text-slate-400 text-xs uppercase">
+                                <tr>
+                                    <th class="px-6 py-4">Bot Name</th>
+                                    <th class="px-6 py-4">Status</th>
+                                    <th class="px-6 py-4">Runtime</th>
+                                    <th class="px-6 py-4 text-right">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody class="divide-y divide-slate-800">
+                                <tr class="hover:bg-slate-800/20">
+                                    <td class="px-6 py-4 font-medium text-white">WhatsApp-V3-Pro</td>
+                                    <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-emerald-500"><span class="w-2 h-2 rounded-full bg-emerald-500"></span> Running</span></td>
+                                    <td class="px-6 py-4 text-slate-400 text-sm">24h 12m</td>
+                                    <td class="px-6 py-4 text-right"><button class="text-xs bg-slate-800 px-3 py-1.5 rounded-lg hover:bg-slate-700">Manage</button></td>
+                                </tr>
+                                <tr class="hover:bg-slate-800/20">
+                                    <td class="px-6 py-4 font-medium text-white">Auto-Responder</td>
+                                    <td class="px-6 py-4"><span class="flex items-center gap-1.5 text-slate-500"><span class="w-2 h-2 rounded-full bg-slate-500"></span> Stopped</span></td>
+                                    <td class="px-6 py-4 text-slate-400 text-sm">--</td>
+                                    <td class="px-6 py-4 text-right"><button class="text-xs bg-slate-800 px-3 py-1.5 rounded-lg hover:bg-slate-700">Manage</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-600 to-indigo-800 rounded-3xl p-8 text-white flex flex-col justify-between shadow-2xl shadow-blue-900/20">
+                    <div>
+                        <h3 class="text-2xl font-bold mb-3">Upgrade to Premium</h3>
+                        <p class="text-blue-100 text-sm opacity-80 leading-relaxed">Get unlimited bot slots, custom API integration, and 24/7 priority support for your business.</p>
+                    </div>
+                    <ul class="my-6 space-y-3">
+                        <li class="flex items-center gap-2 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-200"></i> Unlimited Instances</li>
+                        <li class="flex items-center gap-2 text-sm"><i data-lucide="check-circle-2" class="w-4 h-4 text-blue-200"></i> Zero Lag Servers</li>
+                    </ul>
+                    <button class="bg-white text-blue-700 font-bold py-4 rounded-2xl hover:bg-blue-50 transition-colors shadow-lg">Get Started Now</button>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+      lucide.createIcons();
+    </script>
+</body>
+</html>
